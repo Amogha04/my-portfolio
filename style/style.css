@@ -205,33 +205,52 @@ nav {
     margin-top: 1rem;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .skills-list {
+  .hero-content {
     flex-direction: column;
     align-items: center;
   }
 
-  .project-card {
-    padding: 1rem;
+  .hero-text h1 {
+    font-size: 1.8rem;
   }
 
-  .contact-info {
+  .hero-text p {
     font-size: 1rem;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .skills-list li {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .btn {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    margin: 1rem auto;
   }
 }
+
 /* Dark Mode Toggle Switch */
 .switch {
   position: relative;
@@ -336,4 +355,26 @@ body.dark-mode .skills-list li {
   object-fit: cover;
   border: 3px solid #0077cc;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077cc;
+  outline: none;
 }
