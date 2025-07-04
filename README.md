@@ -1,6 +1,6 @@
-# 💼 Amoghavarsha's Developer Portfolio
+# 💼 Amoghavarsha's  Portfolio
 
-This is my personal developer portfolio built using **HTML**, **Tailwind CSS**, and deployed via **GitHub Pages**. It showcases my skills, projects, resume, and contact information.
+This is my personal  portfolio built using **HTML**, **Tailwind CSS**, and deployed via **GitHub Pages**. It showcases my skills, projects, resume, and contact information.
 
 ## 🚀 Live Website
 [🔗 View Portfolio](https://amogha04.github.io/my-portfolio/)  
@@ -34,9 +34,13 @@ my-portfolio/
 ## 📷 To Do (Soon)
 
 - Add personal photo and banner image  
-- Improve SEO and meta tags  
-- Add favicon  
+- Improve SEO and meta tags   
 - Add more project case studies  
+
+
+## 📬 Contact
+Reach me via the Contact section on the site, or drop an email at:
+📧 amoghvarsha7246@gmail.com
 
 ## 🛠️ How to Run Locally
 
@@ -44,9 +48,4 @@ my-portfolio/
 git clone https://github.com/Amogha04/my-portfolio.git
 cd my-portfolio
 # Open index.html in your browser or using Live Server in VSCode
-
-📬 Contact
-Reach me via the Contact section on the site, or drop an email at:
-📧 amoghvarsha7246@gmail.com
-
 ---
