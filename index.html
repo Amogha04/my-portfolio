@@ -23,7 +23,25 @@
 <meta name="twitter:image" content="https://Amogha04.github.io/my-portfolio/preview.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Inter font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <title>Amoghavarsha | Portfolio</title>
+  <!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+
   <link rel="stylesheet" href="style/style.css" />
   <!-- AOS Animation Library -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -31,108 +49,176 @@
 
 
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Amoghavarsha</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <label class="switch">
-  <input type="checkbox" id="dark-mode-toggle">
-  <span class="slider round"></span>
-</label>
-
+<body class="font-sans bg-white text-gray-800">
+ <header class="bg-white dark:bg-gray-900 shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-bold text-blue-600">Amoghavarsha</h1>
+    <nav class="flex gap-4 text-sm md:text-base">
+      <a href="#home" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Home</a>
+      <a href="#about" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">About</a>
+      <a href="#projects" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Projects</a>
+      <a href="#resume" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Resume</a>
+      <a href="#contact" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Contact</a>
     </nav>
-  </header>
+
+  </div>
+</header>
+
 
 <!-- Hero Section -->
-<section id="home" class="hero" data-aos="fade-up">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Hi, I'm Amoghavarsha</h1>
-        <p>Computer Science Student | Developer | Tech Enthusiast</p>
+<section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 px-4 py-12" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+    
+    <!-- Left: Text -->
+    <div class="text-center md:text-left">
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+        Hi, I'm <span class="text-blue-600 dark:text-blue-400">Amoghavarsha</span>
+      </h1>
+      <p class="mt-4 text-lg sm:text-xl text-gray-600 dark:text-gray-300">
+        Computer Science Student | Developer | Tech Explorer
+      </p>
+
+      <div class="mt-6">
+        <a href="#projects" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-700 transition duration-300">
+          View Projects
+        </a>
+        <a href="#contact" class="ml-4 inline-block px-6 py-3 border border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 dark:hover:bg-gray-700 transition duration-300">
+          Contact Me
+        </a>
       </div>
-      <div class="hero-image">
-        <img src="images/profile-placeholder.png" alt="My Photo">
+    </div>
+
+    <!-- Right: Profile Image -->
+    <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
+      <img src="images/profile-placeholder.png" alt="My Photo" class="w-full h-full object-cover">
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- About Section -->
+<section id="about" class="py-20 px-4 bg-white dark:bg-gray-900" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">About Me</h2>
+
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      
+      <!-- Profile Side (Optional later photo/bio) -->
+      <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
+        <img src="images/profile-placeholder.png" alt="Amoghavarsha" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Bio -->
+      <div class="text-center md:text-left">
+        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+          I'm a Computer Science undergraduate at IIIT Dharwad, passionate about building modern, efficient, and user-friendly web applications. I enjoy working with clean UI/UX and exploring new technologies like cloud, open source, and full-stack development.
+        </p>
+
+        <p class="mt-4 text-gray-600 dark:text-gray-400 text-sm italic">
+          I love solving problems, building things from scratch, and growing one line of code at a time.
+        </p>
       </div>
     </div>
   </div>
 </section>
+<!-- Skills Section -->
+<section id="skills" class="py-20 px-4 bg-blue-50 dark:bg-gray-800" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Skills</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-10">Technologies & tools I'm familiar with</p>
 
-  <!-- About Section -->
-<section id="about" class="about" data-aos="fade-right">
-  <div class="container">
-    <h2>About Me</h2>
-    <p>
-      I'm Amoghavarsha, a Computer Science undergraduate at IIIT Dharwad.
-      I enjoy learning new technologies, building creative projects, and exploring the world of software development.
+    <!-- Skill Badges -->
+    <div class="flex flex-wrap justify-center gap-4">
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">HTML</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">CSS</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">JavaScript</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">Python</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">C/C++</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">Java</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">Git</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">AWS</span>
+      <span class="bg-white dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-full shadow hover:scale-105 transition">MySQL</span>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 px-4 bg-white dark:bg-gray-900" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-6">Projects</h2>
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-10">Some of the things I've built</p>
+
+    <!-- Project Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <!-- Project Card -->
+      <div class="bg-blue-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition duration-300 p-6">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Portfolio Website</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+          A fully responsive personal portfolio site built with HTML, CSS, and Tailwind. Includes resume, projects, and contact form.
+        </p>
+        <a href="https://Amogha04.github.io/my-portfolio" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline text-sm">View Live →</a>
+      </div>
+
+      <!-- Sample Project -->
+      <div class="bg-blue-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition duration-300 p-6">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Coming Soon</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+          More projects will be added here as I build and explore!
+        </p>
+        <span class="text-gray-400 text-sm italic">Under development</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="py-20 px-4 bg-blue-50 dark:bg-gray-800" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Resume</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-8">
+      Download my resume to learn more about my skills, experience, and academic background.
     </p>
 
-    <h3>Skills</h3>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>C/C++</li>
-      <li>Java</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>MySQL</li>
-      <li>Git & GitHub</li>
-      <li>AWS (Basics)</li>
-    </ul>
+<a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition duration-300">
+  View Resume
+</a>
 
-    <h3>Hobbies</h3>
-    <p>I like reading novels, traveling, and participating in college events like Techniosis & Kannada Rajyotsava.</p>
   </div>
 </section>
-<!-- Projects Section -->
-<section id="projects" class="projects" data-aos="fade-left">
-  <div class="container">
-    <h2>Projects</h2>
 
-    <div class="project-card">
-      <h3>Personal Portfolio Website</h3>
-      <p>A personal portfolio website to showcase my skills, projects, and resume. Built using HTML, CSS, and JavaScript.</p>
-      <a href="https://github.com/Amogha04/my-portfolio" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Expense Tracker Web App</h3>
-      <p>A simple web app to manage daily expenses with data saved in localStorage. Features add/delete transactions and chart-based visualization.</p>
-      <a href="#" target="_blank">View on GitHub</a> <!-- Replace # with your link when ready -->
-    </div>
-
-    <!-- Add more project cards as you build them -->
-  </div>
-</section>
-<!-- Resume Section -->
-<section id="resume" class="resume" data-aos="zoom-in">
-  <div class="container">
-    <h2>Resume</h2>
-    <p>You can view or download my resume below:</p>
-    <a href="resume/resume.pdf" target="_blank" class="btn">View Resume</a>
-  </div>
-</section>
 <!-- Contact Section -->
-<section id="contact" class="contact" data-aos="flip-up">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <p>If you'd like to connect, feel free to send me a message!</p>
+<section id="contact" class="py-20 px-4 bg-white dark:bg-gray-900" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Contact Me</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-10">
+      Have a project, idea, or just want to say hi? Let’s talk!
+    </p>
 
-    <form action="https://formspree.io/f/mgvyqgkq" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+    <form action="https://formspree.io/f/mgvyqgkq" method="POST" class="space-y-6 max-w-xl mx-auto text-left">
+      <div>
+        <label for="name" class="block text-gray-700 dark:text-gray-200 mb-2">Name</label>
+        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="email" class="block text-gray-700 dark:text-gray-200 mb-2">Email</label>
+        <input type="email" id="email" name="_replyto" required class="w-full px-4 py-2 border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label for="message" class="block text-gray-700 dark:text-gray-200 mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <button type="submit" class="w-full md:w-auto bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+        Send Message
+      </button>
     </form>
   </div>
 </section>
-
-<script src="scripts/main.js"></script>
 <!-- AOS Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
