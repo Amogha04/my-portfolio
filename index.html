@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amoghavarsha | Portfolio</title>
   <link rel="stylesheet" href="style/style.css" />
+  <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
   <header>
@@ -26,7 +29,7 @@
     </nav>
   </header>
 
-  <section id="home" class="hero">
+  <section id="home" class="hero" data-aos="fade-up">
     <div class="hero-text">
       <h1>Hello, I'm Amoghavarsha 👋</h1>
       <p>A Computer Science undergrad at IIIT Dharwad</p>
@@ -34,7 +37,7 @@
     </div>
   </section>
   <!-- About Section -->
-<section id="about" class="about">
+<section id="about" class="about" data-aos="fade-right">
   <div class="container">
     <h2>About Me</h2>
     <p>
@@ -58,7 +61,7 @@
   </div>
 </section>
 <!-- Projects Section -->
-<section id="projects" class="projects">
+<section id="projects" class="projects" data-aos="fade-left">
   <div class="container">
     <h2>Projects</h2>
 
@@ -78,7 +81,7 @@
   </div>
 </section>
 <!-- Resume Section -->
-<section id="resume" class="resume">
+<section id="resume" class="resume" data-aos="zoom-in">
   <div class="container">
     <h2>Resume</h2>
     <p>You can view or download my resume below:</p>
@@ -86,7 +89,7 @@
   </div>
 </section>
 <!-- Contact Section -->
-<section id="contact" class="contact">
+<section id="contact" class="contact" data-aos="flip-up">
   <div class="container">
     <h2>Contact Me</h2>
     <p>If you'd like to connect, feel free to reach out!</p>
@@ -99,6 +102,11 @@
   </div>
 </section>
 <script src="scripts/main.js"></script>
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
