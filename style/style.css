@@ -232,3 +232,80 @@ nav {
     margin: 0 auto;
   }
 }
+/* Dark Mode Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0077cc;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .nav-links a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .about,
+body.dark-mode .resume,
+body.dark-mode .contact {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .btn {
+  background-color: #005fa3;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #004a80;
+}
+
+body.dark-mode .skills-list li {
+  background-color: #2a2a2a;
+}
